@@ -31,7 +31,7 @@ namespace Genetico01 {
 
         //Retorna un caracter al azar
         private char LetraAzar(Random azar) {
-            string Permitido = "abcdefghijlmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ áéúíóúÁÉÍÓÚÑñ¿?¡!äëïöüÄËÏÖÜ";
+            string Permitido = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ áéúíóúÁÉÍÓÚÑñ¿?¡!äëïöüÄËÏÖÜ";
             return Permitido[azar.Next(Permitido.Length)];
         }
     }
