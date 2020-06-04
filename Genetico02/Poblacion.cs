@@ -36,9 +36,6 @@ namespace Genetico02 {
                 string parteB = Individuos[indivB].Substring(posAzar);
                 string HijoA = parteA + parteB;
 
-                if (Individuos[indivA].Length != HijoA.Length || Individuos[indivB].Length != HijoA.Length)
-                    Console.WriteLine("error");
-
                 //Evalúa la adaptación de los individuos padres e hijos
                 int valorIndivA = objCad.EvaluaCadena(cadOriginal, Individuos[indivA]);
                 int valorIndivB = objCad.EvaluaCadena(cadOriginal, Individuos[indivB]);
@@ -46,7 +43,7 @@ namespace Genetico02 {
 
                 //Si los hijos son mejores que los padres, entonces los reemplaza
                 if (valorHijoA > valorIndivA) Individuos[indivA] = HijoA;
-                else if (valorHijoA > valorIndivB) Individuos[indivB] = HijoA;
+                if (valorHijoA > valorIndivB) Individuos[indivB] = HijoA;
             }
 
             //Después del ciclo, busca el mejor individuo adaptado de la población
