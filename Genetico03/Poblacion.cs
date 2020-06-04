@@ -46,7 +46,7 @@ namespace Genetico03 {
 
                 //Si los hijos son mejores que los padres, entonces los reemplaza
                 if (valorHijoA > valorIndivA) Individuos[indivA] = HijoA;
-                else if (valorHijoA > valorIndivB) Individuos[indivB] = HijoA;
+                if (valorHijoA > valorIndivB) Individuos[indivB] = HijoA;
             }
 
             //Después del ciclo, busca el mejor individuo adaptado de la población
